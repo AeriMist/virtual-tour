@@ -1,16 +1,22 @@
 .main-container {
-  border: 2px solid red;
   height: 100vh;
   width: 100vw;
   display: flex;
   flex-direction: column;
+  position: relative;
 }
 .navigation {
-  background-color: var(--secondary-color-40);
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  background-color: rgba(0, 0, 0, 0.5);
+  backdrop-filter: blur(1px);
   display: flex;
   justify-content: center;
   align-items: center;
-  padding: 8px 0;
+  padding: 24px 0;
+  z-index: 1;
 
   &__nav {
     width: 70%;
@@ -26,12 +32,13 @@
 
     &__links {
       display: flex;
-      gap: 24px;
+      gap: 32px;
 
       & .nav-link {
+        color: white;
         padding: 4px 0;
         list-style-type: none;
-        font-size: var(--font-size-lg);
+        font-size: var(--font-size-xl);
         text-transform: uppercase;
         font-family: "Poppins", sans-serif;
         font-weight: 500;

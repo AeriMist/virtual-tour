@@ -1,5 +1,122 @@
-.home-container {
-  background-color: red;
-  flex: 1 1 0;
-  border: 2px solid blue;
+.home {
+  width: 100vw;
+  background-color: white;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+
+  &__hero {
+    height: 100vh;
+    width: 100%;
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+    & > img {
+      position: absolute;
+      inset: 0;
+      background-image: url("../../assets//landing_hero.webp");
+      background-position: center;
+      background-repeat: no-repeat;
+      background-size: cover;
+      filter: brightness(50%);
+    }
+
+    & > p {
+      z-index: 1;
+      color: white;
+      font-size: var(--font-size-5xl);
+      font-family: "Montserrat", sans-serif;
+      font-weight: 600;
+      text-transform: uppercase;
+    }
+
+    & > p:nth-of-type(1) {
+      font-size: var(--font-size-4xl);
+    }
+
+    & > p:nth-of-type(3) {
+      font-size: var(--font-size-2xl);
+      font-family: "Poppins", sans-serif;
+      font-weight: 400;
+      text-transform: none;
+    }
+  }
+
+  &__welcome {
+    width: 80%;
+    background-color: white;
+    display: flex;
+    gap: 48px;
+    flex-direction: column;
+    align-items: center;
+    padding-top: 60px;
+    padding-bottom: 60px;
+
+    &__header {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      text-align: center;
+      width: 70%;
+
+      & > p {
+        font-family: "Montserrat", sans-serif;
+        font-weight: 600;
+        color: #3c4d22;
+      }
+
+      & > p:nth-of-type(1) {
+        font-size: var(--font-size-3xl);
+        text-transform: uppercase;
+      }
+
+      & > p:nth-of-type(2) {
+        font-size: var(--font-size-lg);
+        font-weight: 400;
+      }
+    }
+
+    &__info {
+      display: flex;
+      gap: 32px;
+
+      &__img {
+        background-color: red;
+        border-radius: 8px;
+        height: 500px;
+        flex: 1;
+      }
+
+      &__text {
+        display: flex;
+        flex-direction: column;
+        flex: 1 1 0;
+        gap: 32px;
+        padding-top: 32px;
+
+        & > p {
+          font-family: "Montserrat", sans-serif;
+          font-weight: 600;
+          color: #3c4d22;
+          width: 100%;
+          font-size: var(--font-size-lg);
+          font-weight: 400;
+        }
+
+        &-title {
+          & > p {
+            font-family: "Montserrat", sans-serif;
+            font-weight: 600;
+            color: #3c4d22;
+            font-size: var(--font-size-2xl);
+          }
+        }
+      }
+    }
+  }
 }
