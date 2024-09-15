@@ -1,0 +1,144 @@
+//Typography
+@mixin typography($font-size, $font-weight, $color, $text-transform: none) {
+  font-family: "Montserrat", sans-serif;
+  font-size: $font-size;
+  font-weight: $font-weight;
+  color: $color;
+  text-transform: $text-transform;
+}
+
+@mixin sectionHeader {
+  @include typography(var(--font-size-6xl), 600, #3c4d22, uppercase);
+}
+
+@mixin sectionInfo {
+  @include typography(var(--font-size-xl), 400, #3c4d22);
+}
+
+@mixin sectionSubHeader {
+  @include typography(var(--font-size-4xl), 600, #3c4d22);
+}
+
+@mixin logoText {
+  @include typography(var(--font-size-3xl), 600, white, uppercase);
+}
+
+//Sections
+@mixin sectionDivider(
+  $background-image-url: "../../assets//landing_hero.webp"
+) {
+  height: 100vh;
+  width: 100%;
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+
+  .bg-hero {
+    position: absolute;
+    inset: 0;
+    background-image: url(#{$background-image-url});
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    filter: brightness(50%);
+  }
+
+  & > p {
+    z-index: 1;
+    color: white;
+    font-family: "Montserrat", sans-serif;
+  }
+
+  .page-title {
+    font-size: var(--font-size-6xl);
+    font-weight: 600;
+    text-transform: uppercase;
+  }
+
+  .page-header {
+    z-index: 1;
+    font-size: var(--font-size-9xl);
+    font-weight: 600;
+    text-transform: uppercase;
+  }
+
+  .page-subtitle {
+    font-size: var(--font-size-2xl);
+    font-weight: 400;
+  }
+}
+
+//Wrapper
+@mixin wrapper(
+  $width: 80%,
+  $gap: 48px,
+  $flex-direction: column,
+  $align-items: center,
+  $padding-top: 60px,
+  $padding-bottom: 60px
+) {
+  width: $width;
+  display: flex;
+  gap: $gap;
+  flex-direction: $flex-direction;
+  align-items: $align-items;
+  padding-top: $padding-top;
+  padding-bottom: $padding-bottom;
+}
+
+//Containers
+@mixin flex-container(
+  $gap: 0,
+  $flex-direction: row,
+  $justify-content: flex-start,
+  $align-items: stretch,
+  $text-align: left,
+  $width: auto
+) {
+  display: flex;
+  gap: $gap;
+  flex-direction: $flex-direction;
+  justify-content: $justify-content;
+  align-items: $align-items;
+  text-align: $text-align;
+  width: $width;
+}
+
+// Mixin for image container
+@mixin img-container(
+  $background-color: red,
+  $border-radius: 8px,
+  $height: 500px,
+  $flex: 1
+) {
+  background-color: $background-color;
+  border-radius: $border-radius;
+  height: $height;
+  flex: $flex;
+}
+
+// Mixin for text container
+@mixin text-container(
+  $flex: 1 1 0,
+  $gap: 32px,
+  $padding-top: 32px,
+  $flex-direction: column
+) {
+  display: flex;
+  flex-direction: $flex-direction;
+  flex: $flex;
+  gap: $gap;
+  padding-top: $padding-top;
+}
+
+// Mixin for flex reverse container
+@mixin flex-reverse {
+  display: flex;
+  flex-direction: column;
+
+  & > div:nth-child(even) {
+    flex-direction: row-reverse;
+  }
+}

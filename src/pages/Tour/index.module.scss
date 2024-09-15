@@ -1,5 +1,74 @@
-.tour-container {
-  background-color: yellow;
-  flex: 1 1 0;
-  border: 2px solid blue;
+@use "../../mixins.scss" as mixins;
+
+.tour {
+  width: 100vw;
+  background-color: white;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+
+  &__map {
+    width: 100%;
+    background-color: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    .dynamic-map {
+      width: 80%;
+      height: 800px;
+      background-color: red;
+    }
+  }
+}
+
+// -------------------------------------------------------------------------------------------------------------
+
+//Typography
+.sectionHeader {
+  @include mixins.sectionHeader;
+}
+
+.sectionInfo {
+  @include mixins.sectionInfo;
+}
+
+.sectionSubHeader {
+  @include mixins.sectionSubHeader;
+}
+
+.logo-text {
+  @include mixins.logoText;
+}
+
+//Wrapper
+.wrapper {
+  @include mixins.wrapper;
+}
+
+//Sections
+.sectionDivider {
+  @include mixins.sectionDivider("../../assets//landing_hero.webp");
+}
+
+//Containers
+.info-container {
+  @include mixins.flex-container(32px);
+
+  &__img {
+    @include mixins.img-container;
+  }
+
+  &__text {
+    @include mixins.text-container;
+  }
+}
+
+.header-container {
+  @include mixins.flex-container(0, column, center, center, center, 70%);
+}
+
+.flex-reverse-container {
+  @include mixins.flex-reverse;
 }
