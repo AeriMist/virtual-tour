@@ -9,7 +9,11 @@ export default function index() {
         <p className={styles["page-header"]}>Bakhawan's</p>
         <p className={styles["page-header"]}>Gallery</p>
         <p className={styles["page-subtitle"]}>
-        Lorem ipsum dolor sit amet consectetur adipisicing elit. Accusantium laborum ratione suscipit dignissimos, dolor exercitationem quasi. Modi quam ducimus distinctio debitis sit laboriosam, corporis dolor delectus deleniti veniam ea quasi atque fuga ut voluptas! Repellat at praesentium ad atque quibusdam?
+          Lorem ipsum dolor sit amet consectetur adipisicing elit. Accusantium
+          laborum ratione suscipit dignissimos, dolor exercitationem quasi. Modi
+          quam ducimus distinctio debitis sit laboriosam, corporis dolor
+          delectus deleniti veniam ea quasi atque fuga ut voluptas! Repellat at
+          praesentium ad atque quibusdam?
         </p>
       </div>
       <div className={styles["tour__map"]}>
@@ -22,7 +26,16 @@ export default function index() {
               serene spot for eco-tourism and nature appreciation.
             </p>
           </div>
-          <div className={styles["dynamic-map"]}></div>
+          <div className={styles["dynamic-map"]}>
+            <iframe
+              width="100%"
+              height="640"
+              frameborder="0"
+              allow="xr-spatial-tracking; gyroscope; accelerometer"
+              allowfullscreen
+              src="https://www.3dvista.com/samples/animated_panorama.html"
+            ></iframe>
+          </div>
         </div>
       </div>
     </div>
