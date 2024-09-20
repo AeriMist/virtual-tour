@@ -1,9 +1,10 @@
 import React, { useEffect } from "react";
 import styles from "./index.module.scss";
-import { NavLink, Outlet, useLocation } from "react-router-dom";
+import { NavLink, Outlet, useLocation, useNavigate } from "react-router-dom";
 import clsx from "clsx";
 
 export default function Index() {
+  const navigate = useNavigate();
   const location = useLocation();
 
   return (
@@ -49,7 +50,7 @@ export default function Index() {
             >
               About
             </NavLink>
-            <NavLink
+            {/* <NavLink
               to="/contact"
               className={clsx(
                 styles["nav-link"],
@@ -57,7 +58,17 @@ export default function Index() {
               )}
             >
               Contacts
-            </NavLink>
+            </NavLink> */}
+            <button
+              style={{
+                padding: "8px 16px",
+                borderRadius: "4px",
+                border: "none",
+              }}
+              onClick={() => navigate('/contact')}
+            >
+              Contact Us
+            </button>
           </div>
         </div>
       </div>

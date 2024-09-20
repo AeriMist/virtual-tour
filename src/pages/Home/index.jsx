@@ -9,7 +9,12 @@ export default function index() {
         <p className={styles["page-title"]}>Welcome to </p>
         <p className={styles["page-header"]}>Ecoventure</p>
         <p className={styles["page-subtitle"]}>
-          brings together nature and adventure.
+          {/* brings together nature and adventure. */}
+          Lorem ipsum dolor sit amet consectetur adipisicing elit. Accusantium
+          laborum ratione suscipit dignissimos, dolor exercitationem quasi. Modi
+          quam ducimus distinctio debitis sit laboriosam, corporis dolor
+          delectus deleniti veniam ea quasi atque fuga ut voluptas! Repellat at
+          praesentium ad atque quibusdam?
         </p>
       </div>
       <div className={styles["home__welcome"]}>
@@ -45,19 +50,45 @@ export default function index() {
       </div>
       <div className={styles["home__view-point"]}>
         <div className={styles["wrapper"]}>
-          <p className={styles["sectionHeader"]}>View Point</p>
-          <div className={styles["home__view-point__img-container"]}>
-            <div></div>
-            <div></div>
-            <div></div>
-          </div>
-          <div className={styles["home__view-point__info"]}>
+          <div className={styles["header-container"]}>
+            <p className={styles["sectionHeader"]}>View Point</p>
             <p className={styles["sectionInfo"]}>
-              Lorem ipsum dolor sit amet consectetur adipisicing elit. Ex vel
-              praesentium expedita dignissimos accusantium sapiente quis commodi
-              aliquid accusamus sunt provident inventore nihil eos consectetur
-              quibusdam delectus perferendis, atque natus?
+              Exploring Bakhawan Eco Park lets you stroll through lush mangroves
+              on bamboo boardwalks, surrounded by diverse wildlife. It's a
+              serene spot for eco-tourism and nature appreciation.
             </p>
+          </div>
+          <div className={styles["home__view-point__img-container"]}>
+            <div className={styles["card-container"]}>
+              <div className={styles["card-img"]}></div>
+              <div className={styles["card-info-container"]}>
+                <p>Entrance</p>
+                <p>
+                  Lorem ipsum dolor sit amet consectetur adipisicing elit. Quia,
+                  recusandae.
+                </p>
+              </div>
+            </div>
+            <div className={styles["card-container"]}>
+              <div className={styles["card-img"]}></div>
+              <div className={styles["card-info-container"]}>
+                <p>Entrance</p>
+                <p>
+                  Lorem ipsum dolor sit amet consectetur adipisicing elit. Quia,
+                  recusandae.
+                </p>
+              </div>
+            </div>
+            <div className={styles["card-container"]}>
+              <div className={styles["card-img"]}></div>
+              <div className={styles["card-info-container"]}>
+                <p>Entrance</p>
+                <p>
+                  Lorem ipsum dolor sit amet consectetur adipisicing elit. Quia,
+                  recusandae.
+                </p>
+              </div>
+            </div>
           </div>
         </div>
       </div>

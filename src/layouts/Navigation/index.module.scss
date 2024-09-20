@@ -15,11 +15,11 @@
   display: flex;
   justify-content: center;
   align-items: center;
-  padding: 24px 0;
+  padding: 16px 0;
   z-index: 1;
 
   &__nav {
-    width: 70%;
+    width: 80%;
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -32,13 +32,30 @@
 
     &__links {
       display: flex;
-      gap: 32px;
+      justify-content: center;
+      align-items: center;
+      gap: 60px;
+
+      & button {
+        padding: 4px 0;
+        list-style-type: none;
+        font-size: var(--font-size-md);
+        text-transform: uppercase;
+        font-family: "Poppins", sans-serif;
+        font-weight: 500;
+        transition: all 0.3s ease-in-out;
+
+        &:hover {
+          transition: all 0.3s ease-in-out;
+          scale: 1.1;
+        }
+      }
 
       & .nav-link {
         color: white;
         padding: 4px 0;
         list-style-type: none;
-        font-size: var(--font-size-xl);
+        font-size: var(--font-size-md);
         text-transform: uppercase;
         font-family: "Poppins", sans-serif;
         font-weight: 500;

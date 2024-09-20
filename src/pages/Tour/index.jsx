@@ -9,7 +9,7 @@ export default function index() {
         <p className={styles["page-header"]}>Bakhawan's</p>
         <p className={styles["page-header"]}>Gallery</p>
         <p className={styles["page-subtitle"]}>
-          Etiam at nisl faucibus felis ornare convallis.{" "}
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Accusantium laborum ratione suscipit dignissimos, dolor exercitationem quasi. Modi quam ducimus distinctio debitis sit laboriosam, corporis dolor delectus deleniti veniam ea quasi atque fuga ut voluptas! Repellat at praesentium ad atque quibusdam?
         </p>
       </div>
       <div className={styles["tour__map"]}>

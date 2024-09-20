@@ -8,15 +8,16 @@
 }
 
 @mixin sectionHeader {
-  @include typography(var(--font-size-6xl), 600, #3c4d22, uppercase);
+  @include typography(var(--font-size-4xl), 600, #3c4d22, uppercase);
 }
 
 @mixin sectionInfo {
-  @include typography(var(--font-size-xl), 400, #3c4d22);
+  @include typography(var(--font-size-lg), 400, #3c4d22);
 }
 
 @mixin sectionSubHeader {
-  @include typography(var(--font-size-4xl), 600, #3c4d22);
+  @include typography(var(--font-size-3xl), 600, #3c4d22);
+  text-transform: uppercase
 }
 
 @mixin logoText {
@@ -52,21 +53,23 @@
   }
 
   .page-title {
-    font-size: var(--font-size-6xl);
+    font-size: var(--font-size-3xl);
     font-weight: 600;
     text-transform: uppercase;
   }
 
   .page-header {
     z-index: 1;
-    font-size: var(--font-size-9xl);
+    font-size: var(--font-size-8xl);
     font-weight: 600;
     text-transform: uppercase;
   }
 
   .page-subtitle {
-    font-size: var(--font-size-2xl);
+    font-size: var(--font-size-lg);
     font-weight: 400;
+    width: 45%;
+    text-align: center;
   }
 }
 
@@ -140,5 +143,35 @@
 
   & > div:nth-child(even) {
     flex-direction: row-reverse;
+  }
+}
+
+//Mixin for card component
+// Mixin for card component
+@mixin card-container($border-color: green, $border-radius: 8px, $height: 500px) {
+  border: 1px solid $border-color;
+  height: $height;
+  border-radius: $border-radius;
+  position: relative;
+
+  // .card-img {
+  //   // Add any specific styles for the image here
+  // }
+
+  .card-info-container {
+    position: absolute;
+    bottom: 16px;
+    left: 16px;
+    width: 80%;
+
+    p {
+      &:first-child {
+        @include typography(var(--font-size-2xl), 600, uppercase);
+      }
+
+      &:last-child {
+        @include typography(var(--font-size-md), 300, uppercase);
+      }
+    }
   }
 }
