@@ -1,0 +1,122 @@
+@use "../../mixins.scss" as mixins;
+
+.footer {
+  background-color: white;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+
+  &__container {
+    width: 80%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 32px;
+    padding: 60px 0px;
+
+    & .header {
+      width: 100%;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+
+      &__logo {
+        & > p {
+          font-size: var(--font-size-3xl);
+        }
+      }
+
+      &__socials {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        gap: 8px;
+
+        & > div {
+          width: 48px;
+          height: 48px;
+          border-radius: 100%;
+          background-color: red;
+        }
+      }
+    }
+
+    & .grid {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      gap: 32px;
+      justify-content: space-between;
+      width: 100%;
+
+      &__item {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: start;
+        gap: 32px;
+
+        &__content {
+          width: 70%;
+          display: flex;
+          flex-direction: column;
+          gap: 32px;
+        }
+
+        & .contacts {
+          display: flex;
+          flex-direction: column;
+          gap: 8px;
+        }
+      }
+    }
+  }
+
+  & .licensing {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #3c4d22;
+    padding: 8px 0;
+
+    &__wrapper {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      width: 80%;
+    }
+  }
+}
+
+// -------------------------------------------------------------------------------------------------------------
+
+//Typography
+.sectionHeader {
+  @include mixins.sectionHeader;
+}
+
+.sectionInfo {
+  @include mixins.sectionInfo;
+}
+
+.sectionSubHeader {
+  @include mixins.sectionSubHeader;
+}
+
+.footerHeader {
+  @include mixins.footerHeader;
+}
+
+.footerSubHeader {
+  @include mixins.footerSubHeader;
+}
+
+.footerLogoText {
+  @include mixins.footerLogoText;
+}
+
+.logo-text {
+  @include mixins.logoText;
+}

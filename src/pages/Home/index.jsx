@@ -9,13 +9,13 @@ export default function index() {
         <p className={styles["page-title"]}>Welcome to </p>
         <p className={styles["page-header"]}>Ecoventure</p>
         <p className={styles["page-subtitle"]}>
-          {/* brings together nature and adventure. */}
           Lorem ipsum dolor sit amet consectetur adipisicing elit. Accusantium
           laborum ratione suscipit dignissimos, dolor exercitationem quasi. Modi
           quam ducimus distinctio debitis sit laboriosam, corporis dolor
           delectus deleniti veniam ea quasi atque fuga ut voluptas! Repellat at
           praesentium ad atque quibusdam?
         </p>
+        <button>Explore</button>
       </div>
       <div className={styles["home__welcome"]}>
         <div className={styles["wrapper"]}>

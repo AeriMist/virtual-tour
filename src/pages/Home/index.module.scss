@@ -39,13 +39,6 @@
       grid-template-columns: repeat(3, 1fr);
       gap: 100px;
       justify-content: space-around;
-
-      // & > div {
-      //   height: 500px;
-      //   background-color: red;
-      //   border-radius: 8px;
-      // }
-      
     }
   }
 }
@@ -76,7 +69,7 @@
 
 //Sections
 .sectionDivider {
-  @include mixins.sectionDivider("../../assets//landing_hero.webp");
+  @include mixins.sectionDivider("../../assets/bakhawan-hero-bg.webp");
 }
 
 //Containers

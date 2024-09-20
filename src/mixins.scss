@@ -1,33 +1,58 @@
-//Typography
-@mixin typography($font-size, $font-weight, $color, $text-transform: none) {
+@import url("https://fonts.googleapis.com/css2?family=Noto+Serif+JP:wght@200..900&display=swap");
+
+//Fonts
+@mixin Montserrat($font-size, $font-weight, $color, $text-transform: none) {
   font-family: "Montserrat", sans-serif;
   font-size: $font-size;
   font-weight: $font-weight;
   color: $color;
   text-transform: $text-transform;
 }
+@mixin NotoSerif($font-size, $font-weight, $color, $text-transform: none) {
+  font-family: "Noto Serif JP", serif;
+  font-size: $font-size;
+  font-weight: $font-weight;
+  color: $color;
+  text-transform: $text-transform;
+}
+@mixin Poppins($font-size, $font-weight, $color, $text-transform: none) {
+  font-family: "Poppins", serif;
+  font-size: $font-size;
+  font-weight: $font-weight;
+  color: $color;
+  text-transform: $text-transform;
+}
 
+//Typography
+
+//Sections
 @mixin sectionHeader {
-  @include typography(var(--font-size-4xl), 600, #3c4d22, uppercase);
+  @include NotoSerif(var(--font-size-4xl), 900, #3c4d22);
 }
-
 @mixin sectionInfo {
-  @include typography(var(--font-size-lg), 400, #3c4d22);
+  @include Montserrat(var(--font-size-lg), 400, #3c4d22);
+}
+@mixin sectionSubHeader {
+  @include NotoSerif(var(--font-size-3xl), 600, #3c4d22);
+}
+//Footer
+@mixin footerHeader {
+  @include Montserrat(var(--font-size-lg), 900, #3c4d22);
+}
+@mixin footerSubHeader {
+  @include Montserrat(var(--font-size-md), 300, #3c4d22);
 }
 
-@mixin sectionSubHeader {
-  @include typography(var(--font-size-3xl), 600, #3c4d22);
-  text-transform: uppercase
+@mixin footerLogoText {
+  @include NotoSerif(var(--font-size-md), 600, white);
 }
 
 @mixin logoText {
-  @include typography(var(--font-size-3xl), 600, white, uppercase);
+  @include Montserrat(var(--font-size-3xl), 600, white, uppercase);
 }
 
 //Sections
-@mixin sectionDivider(
-  $background-image-url: "../../assets//landing_hero.webp"
-) {
+@mixin sectionDivider($background-image-url) {
   height: 100vh;
   width: 100%;
   position: relative;
@@ -49,27 +74,38 @@
   & > p {
     z-index: 1;
     color: white;
-    font-family: "Montserrat", sans-serif;
   }
 
   .page-title {
-    font-size: var(--font-size-3xl);
-    font-weight: 600;
-    text-transform: uppercase;
+    @include Montserrat(var(--font-size-3xl), 300, uppercase);
   }
 
   .page-header {
     z-index: 1;
-    font-size: var(--font-size-8xl);
-    font-weight: 600;
-    text-transform: uppercase;
+    @include NotoSerif(var(--font-size-8xl), 900, uppercase);
   }
 
   .page-subtitle {
-    font-size: var(--font-size-lg);
-    font-weight: 400;
-    width: 45%;
+    @include Montserrat(var(--font-size-lg), 400, uppercase);
+    width: 50%;
     text-align: center;
+  }
+
+  & button {
+    @include Poppins(var(--font-size-lg), 500, white, uppercase);
+    margin-top: 16px;
+    z-index: 1;
+    padding: 4px 0;
+    list-style-type: none;
+    transition: all 0.3s ease-in-out;
+    background-color: #6abe52;
+    padding: 12px 48px;
+    border-radius: 32px;
+    border: none;
+
+    &:hover {
+      background-color: #282828;
+    }
   }
 }
 
@@ -147,8 +183,11 @@
 }
 
 //Mixin for card component
-// Mixin for card component
-@mixin card-container($border-color: green, $border-radius: 8px, $height: 500px) {
+@mixin card-container(
+  $border-color: green,
+  $border-radius: 8px,
+  $height: 500px
+) {
   border: 1px solid $border-color;
   height: $height;
   border-radius: $border-radius;
@@ -166,11 +205,11 @@
 
     p {
       &:first-child {
-        @include typography(var(--font-size-2xl), 600, uppercase);
+        @include NotoSerif(var(--font-size-2xl), 900, uppercase);
       }
 
       &:last-child {
-        @include typography(var(--font-size-md), 300, uppercase);
+        @include Montserrat(var(--font-size-md), 300, uppercase);
       }
     }
   }
