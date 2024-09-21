@@ -24,6 +24,10 @@
     display: flex;
     justify-content: center;
     align-items: center;
+    background-image: url("../../../public/HomeAssets/homeBg.png");
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
   }
 
   &__view-point {
@@ -36,9 +40,9 @@
     &__img-container {
       width: 100%;
       display: grid;
-      grid-template-columns: repeat(3, 1fr);
-      gap: 100px;
-      justify-content: space-around;
+      grid-template-columns: repeat(3, auto);
+      gap: 20px;
+      justify-content: space-between;
     }
   }
 }
@@ -49,27 +53,27 @@
 .sectionHeader {
   @include mixins.sectionHeader;
 }
-
 .sectionInfo {
   @include mixins.sectionInfo;
 }
-
 .sectionSubHeader {
   @include mixins.sectionSubHeader;
 }
-
+.sectionSubInfo {
+  @include mixins.sectionSubInfo;
+}
 .logo-text {
   @include mixins.logoText;
 }
 
 //Wrapper
-.wrapper {
-  @include mixins.wrapper;
+.width-wrapper {
+  @include mixins.width-wrapper;
 }
 
 //Sections
-.sectionDivider {
-  @include mixins.sectionDivider("../../assets/bakhawan-hero-bg.webp");
+.page-hero {
+  @include mixins.page-hero("../../../public/HomeAssets/homeHero.webp");
 }
 
 //Containers
@@ -77,6 +81,7 @@
   @include mixins.flex-container(32px);
 
   &__img {
+    height: 500px;
     @include mixins.img-container;
   }
 
@@ -84,15 +89,12 @@
     @include mixins.text-container;
   }
 }
-
 .header-container {
   @include mixins.flex-container(0, column, center, center, center, 70%);
 }
-
 .flex-reverse-container {
   @include mixins.flex-reverse;
 }
-
 .card-container {
   @include mixins.card-container();
 }

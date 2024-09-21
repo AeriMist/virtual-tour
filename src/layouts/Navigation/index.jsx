@@ -12,7 +12,9 @@ export default function Index() {
     <div className={styles["main-container"]}>
       <div className={styles["navigation"]}>
         <div className={styles["navigation__nav"]}>
-          <div className={styles["navigation__nav__logo"]}></div>
+          <div className={styles["navigation__nav__logo"]}>
+            <p className={styles["navigationLogoText"]}>Ecoventure</p>
+          </div>
           <div className={styles["navigation__nav__links"]}>
             <NavLink
               to="/"

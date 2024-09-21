@@ -19,7 +19,7 @@
       width: 60%;
       height: 500px;
       background-color: red;
-      border-radius: 8px
+      border-radius: 8px;
     }
   }
 }
@@ -30,27 +30,27 @@
 .sectionHeader {
   @include mixins.sectionHeader;
 }
-
 .sectionInfo {
   @include mixins.sectionInfo;
 }
-
 .sectionSubHeader {
   @include mixins.sectionSubHeader;
 }
-
+.sectionSubInfo {
+  @include mixins.sectionSubInfo;
+}
 .logo-text {
   @include mixins.logoText;
 }
 
 //Wrapper
-.wrapper {
-  @include mixins.wrapper;
+.width-wrapper {
+  @include mixins.width-wrapper;
 }
 
 //Sections
-.sectionDivider {
-  @include mixins.sectionDivider("../../assets//landing_hero.webp");
+.page-hero {
+  @include mixins.page-hero("../../../public/HomeAssets/homeHero.webp");
 }
 
 //Containers
@@ -58,6 +58,7 @@
   @include mixins.flex-container(32px);
 
   &__img {
+    height: 500px;
     @include mixins.img-container;
   }
 
@@ -65,11 +66,12 @@
     @include mixins.text-container;
   }
 }
-
 .header-container {
   @include mixins.flex-container(0, column, center, center, center, 70%);
 }
-
 .flex-reverse-container {
   @include mixins.flex-reverse;
+}
+.card-container {
+  @include mixins.card-container();
 }

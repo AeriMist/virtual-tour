@@ -1,3 +1,5 @@
+@use "../../mixins.scss" as mixins;
+
 .main-container {
   height: 100vh;
   width: 100vw;
@@ -24,9 +26,10 @@
     align-items: center;
 
     &__logo {
-      width: 120px;
-      height: 60px;
-      background-color: var(--neutral-color-50);
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      gap: 8px;
     }
 
     &__links {
@@ -81,4 +84,9 @@
 .outlet {
   flex: 1 1 0;
   display: flex;
+}
+
+//----------------------------------------------------------
+.navigationLogoText {
+  @include mixins.navigationLogoText;
 }

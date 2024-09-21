@@ -1,10 +1,15 @@
 import React from "react";
 import styles from "./index.module.scss";
 
+import homeWelcome from "../../../public/HomeAssets/homeWelcome.png";
+import homeCard1 from "../../../public/HomeAssets/homeEntrance.png";
+import homeCard2 from "../../../public/HomeAssets/homeBridge.png";
+import homeCard3 from "../../../public/HomeAssets/homeSea.png";
+
 export default function index() {
   return (
     <div className={styles["home"]}>
-      <div className={styles["sectionDivider"]}>
+      <div className={styles["page-hero"]}>
         <div className={styles["bg-hero"]} />
         <p className={styles["page-title"]}>Welcome to </p>
         <p className={styles["page-header"]}>Ecoventure</p>
@@ -18,7 +23,7 @@ export default function index() {
         <button>Explore</button>
       </div>
       <div className={styles["home__welcome"]}>
-        <div className={styles["wrapper"]}>
+        <div className={styles["width-wrapper"]}>
           <div className={styles["header-container"]}>
             <p className={styles["sectionHeader"]}>BAKHAWAN ECO PARK</p>
             <p className={styles["sectionInfo"]}>
@@ -28,17 +33,19 @@ export default function index() {
             </p>
           </div>
           <div className={styles["info-container"]}>
-            <div className={styles["info-container__img"]} />
+            <div className={styles["info-container__img"]}>
+              <img src={homeWelcome} alt="welcome image" />
+            </div>
             <div className={styles["info-container__text"]}>
               <p className={styles["sectionSubHeader"]}>
                 Welcome to Bakhawan Eco Park
               </p>
-              <p className={styles["sectionInfo"]}>
+              <p className={styles["sectionSubInfo"]}>
                 Bakhawan Eco-Park, a 220-hectare mangrove forest in Kalibo,
                 Aklan, Philippines, was established in 1990 as a reforestation
                 project to protect the community from floods and storm surges.
               </p>
-              <p className={styles["sectionInfo"]}>
+              <p className={styles["sectionSubInfo"]}>
                 Operated by the Kalibo Save the Mangroves Association (KASAMA),
                 it is considered the country's most successful mangrove
                 reforestation effort. The word "bakhawan" means "mangrove" in
@@ -49,7 +56,7 @@ export default function index() {
         </div>
       </div>
       <div className={styles["home__view-point"]}>
-        <div className={styles["wrapper"]}>
+        <div className={styles["width-wrapper"]}>
           <div className={styles["header-container"]}>
             <p className={styles["sectionHeader"]}>View Point</p>
             <p className={styles["sectionInfo"]}>
@@ -60,7 +67,10 @@ export default function index() {
           </div>
           <div className={styles["home__view-point__img-container"]}>
             <div className={styles["card-container"]}>
-              <div className={styles["card-img"]}></div>
+              <div className={styles["card-overlay"]}></div>
+              <div className={styles["card-img"]}>
+                <img src={homeCard1} alt="card image" />
+              </div>
               <div className={styles["card-info-container"]}>
                 <p>Entrance</p>
                 <p>
@@ -70,7 +80,10 @@ export default function index() {
               </div>
             </div>
             <div className={styles["card-container"]}>
-              <div className={styles["card-img"]}></div>
+              <div className={styles["card-overlay"]}></div>
+              <div className={styles["card-img"]}>
+                <img src={homeCard2} alt="card image" />
+              </div>
               <div className={styles["card-info-container"]}>
                 <p>Entrance</p>
                 <p>
@@ -80,7 +93,10 @@ export default function index() {
               </div>
             </div>
             <div className={styles["card-container"]}>
-              <div className={styles["card-img"]}></div>
+              <div className={styles["card-overlay"]}></div>
+              <div className={styles["card-img"]}>
+                <img src={homeCard3} alt="card image" />
+              </div>
               <div className={styles["card-info-container"]}>
                 <p>Entrance</p>
                 <p>

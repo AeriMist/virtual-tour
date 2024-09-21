@@ -24,8 +24,6 @@
 }
 
 //Typography
-
-//Sections
 @mixin sectionHeader {
   @include NotoSerif(var(--font-size-4xl), 900, #3c4d22);
 }
@@ -33,26 +31,29 @@
   @include Montserrat(var(--font-size-lg), 400, #3c4d22);
 }
 @mixin sectionSubHeader {
-  @include NotoSerif(var(--font-size-3xl), 600, #3c4d22);
+  @include NotoSerif(var(--font-size-2xl), 600, #3c4d22);
 }
-//Footer
+@mixin sectionSubInfo {
+  @include Montserrat(var(--font-size-md), 400, #3c4d22);
+}
 @mixin footerHeader {
   @include Montserrat(var(--font-size-lg), 900, #3c4d22);
 }
 @mixin footerSubHeader {
   @include Montserrat(var(--font-size-md), 300, #3c4d22);
 }
-
 @mixin footerLogoText {
   @include NotoSerif(var(--font-size-md), 600, white);
 }
-
+@mixin navigationLogoText {
+  @include NotoSerif(var(--font-size-2xl), 900, white);
+}
 @mixin logoText {
   @include Montserrat(var(--font-size-3xl), 600, white, uppercase);
 }
 
 //Sections
-@mixin sectionDivider($background-image-url) {
+@mixin page-hero($background-image-url) {
   height: 100vh;
   width: 100%;
   position: relative;
@@ -81,7 +82,6 @@
   }
 
   .page-header {
-    z-index: 1;
     @include NotoSerif(var(--font-size-8xl), 900, uppercase);
   }
 
@@ -110,21 +110,14 @@
 }
 
 //Wrapper
-@mixin wrapper(
-  $width: 80%,
-  $gap: 48px,
-  $flex-direction: column,
-  $align-items: center,
-  $padding-top: 60px,
-  $padding-bottom: 60px
-) {
-  width: $width;
+@mixin width-wrapper() {
+  width: 75%;
   display: flex;
-  gap: $gap;
-  flex-direction: $flex-direction;
-  align-items: $align-items;
-  padding-top: $padding-top;
-  padding-bottom: $padding-bottom;
+  gap: 48px;
+  flex-direction: column;
+  align-items: center;
+  padding-top: 60px;
+  padding-bottom: 60px;
 }
 
 //Containers
@@ -146,16 +139,13 @@
 }
 
 // Mixin for image container
-@mixin img-container(
-  $background-color: red,
-  $border-radius: 8px,
-  $height: 500px,
-  $flex: 1
-) {
-  background-color: $background-color;
-  border-radius: $border-radius;
-  height: $height;
-  flex: $flex;
+@mixin img-container() {
+  & > img {
+    width: 100%;
+    height: 100%;
+    border-radius: 8px;
+    object-fit: cover;
+  }
 }
 
 // Mixin for text container
@@ -183,19 +173,21 @@
 }
 
 //Mixin for card component
-@mixin card-container(
-  $border-color: green,
-  $border-radius: 8px,
-  $height: 500px
-) {
-  border: 1px solid $border-color;
-  height: $height;
-  border-radius: $border-radius;
+@mixin card-container() {
+  border-radius: 8px;
   position: relative;
 
-  // .card-img {
-  //   // Add any specific styles for the image here
-  // }
+  .card-overlay {
+    position: absolute;
+    inset: 0;
+    background-color: rgba(0, 0, 0, 0.4);
+    border-radius: 8px;
+  }
+
+  .card-img {
+    height: 450px;
+    @include img-container();
+  }
 
   .card-info-container {
     position: absolute;
@@ -205,11 +197,11 @@
 
     p {
       &:first-child {
-        @include NotoSerif(var(--font-size-2xl), 900, uppercase);
+        @include NotoSerif(var(--font-size-2xl), 900, white, uppercase);
       }
 
       &:last-child {
-        @include Montserrat(var(--font-size-md), 300, uppercase);
+        @include Montserrat(var(--font-size-md), 300, white);
       }
     }
   }

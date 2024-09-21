@@ -4,7 +4,7 @@ import styles from "./index.module.scss";
 export default function index() {
   return (
     <div className={styles["tour"]}>
-      <div className={styles["sectionDivider"]}>
+      <div className={styles["page-hero"]}>
         <div className={styles["bg-hero"]} />
         <p className={styles["page-header"]}>Bakhawan's</p>
         <p className={styles["page-header"]}>Gallery</p>
@@ -17,7 +17,7 @@ export default function index() {
         </p>
       </div>
       <div className={styles["tour__map"]}>
-        <div className={styles["wrapper"]}>
+        <div className={styles["width-wrapper"]}>
           <div className={styles["header-container"]}>
             <p className={styles["sectionHeader"]}>MAP</p>
             <p className={styles["sectionInfo"]}>

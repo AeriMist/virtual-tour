@@ -1,10 +1,14 @@
 import React from "react";
 import styles from "./index.module.scss";
 
+import aboutDiy1 from "../../../public/AboutAssetsBakhawan/aboutDiy1.png";
+import aboutDiy2 from "../../../public/AboutAssetsBakhawan/aboutDiy2.png";
+import aboutTricycle from "../../../public/AboutAssetsBakhawan/aboutTricycle.png";
+
 export default function index() {
   return (
     <div className={styles["about"]}>
-      <div className={styles["sectionDivider"]}>
+      <div className={styles["page-hero"]}>
         <div className={styles["bg-hero"]} />
         <p className={styles["page-title"]}>About</p>
         <p className={styles["page-header"]}>Bakhawan</p>
@@ -14,13 +18,15 @@ export default function index() {
         </p>
       </div>
       <div className={styles["about__dyk"]}>
-        <div className={styles["wrapper"]}>
+        <div className={styles["width-wrapper"]}>
           <div className={styles["header-container"]}>
             <p className={styles["sectionHeader"]}>Did you know?</p>
           </div>
           <div className={styles["flex-reverse-container"]}>
             <div className={styles["info-container"]}>
-              <div className={styles["info-container__img"]} />
+              <div className={styles["info-container__img"]}>
+                <img src={aboutDiy1} alt="welcome image" />
+              </div>
               <div className={styles["info-container__text"]}>
                 <p className={styles["sectionSubHeader"]}>
                   Founder of Bakhawan Eco Park Kalibo
@@ -39,7 +45,9 @@ export default function index() {
               </div>
             </div>
             <div className={styles["info-container"]}>
-              <div className={styles["info-container__img"]} />
+              <div className={styles["info-container__img"]}>
+                <img src={aboutDiy2} alt="welcome image" />
+              </div>
               <div className={styles["info-container__text"]}>
                 <p className={styles["sectionSubHeader"]}>
                   Lorem ipsum dolor sit amet
@@ -61,12 +69,14 @@ export default function index() {
         </div>
       </div>
       <div className={styles["about__direction"]}>
-        <div className={styles["wrapper"]}>
+        <div className={styles["width-wrapper"]}>
           <div className={styles["header-container"]}>
             <p className={styles["sectionHeader"]}>HOW TO GET THERE?</p>
           </div>
           <div className={styles["info-container"]}>
-            <div className={styles["info-container__img"]} />
+            <div className={styles["info-container__img"]}>
+              <img src={aboutTricycle} alt="welcome image" />
+            </div>
             <div className={styles["info-container__text"]}>
               <p className={styles["sectionSubHeader"]}>Tickets and entry</p>
               <p className={styles["sectionInfo"]}>
