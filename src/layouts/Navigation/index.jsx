@@ -36,13 +36,13 @@ export default function Index() {
               Virtual Tour
             </NavLink>
             <NavLink
-              to="/shop"
+              to="/gallery"
               className={clsx(
                 styles["nav-link"],
-                location.pathname === "/shop" && styles["active-link"]
+                location.pathname === "/gallery" && styles["active-link"]
               )}
             >
-              Shop
+              Gallery
             </NavLink>
             <NavLink
               to="/about"

@@ -8,7 +8,7 @@ import Navigation from "./layouts/Navigation";
 import Home from "./pages/Home";
 import About from "./pages/About";
 import Tour from "./pages/Tour";
-import Shop from "./pages/Shop";
+import Gallery from "./pages/Gallery";
 import Contact from "./pages/Contact";
 
 function App() {
@@ -19,7 +19,7 @@ function App() {
           <Route index element={<Home />} />
           <Route path="about" element={<About />} />
           <Route path="tour" element={<Tour />} />
-          <Route path="shop" element={<Shop />} />
+          <Route path="gallery" element={<Gallery />} />
           <Route path="contact" element={<Contact />} />
         </Route>
       </Routes>
